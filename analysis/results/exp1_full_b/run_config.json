@@ -1,0 +1,16 @@
+{
+  "delays_ms": [
+    4.0,
+    8.0,
+    12.0,
+    16.0
+  ],
+  "n_seeds": 6,
+  "n_stimuli": 4,
+  "duration_ms": 500.0,
+  "transient_ms": 150.0,
+  "n_workers": 4,
+  "out_dir": "analysis/results/exp1_full_b",
+  "scale": "full",
+  "bump_amplitude": 30.0
+}

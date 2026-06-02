@@ -1,0 +1,16 @@
+{
+  "conditions": [
+    "intact",
+    "scramble",
+    "poisson"
+  ],
+  "delay_ms": 8.0,
+  "n_seeds": 6,
+  "n_stimuli": 4,
+  "duration_ms": 500.0,
+  "transient_ms": 150.0,
+  "bump_amplitude": 30.0,
+  "n_workers": 4,
+  "scale": "full",
+  "out_dir": "analysis/results/exp2_full_v2"
+}

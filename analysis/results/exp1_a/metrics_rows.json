@@ -1,0 +1,2210 @@
+[
+  {
+    "sender_rate_hz": 29.92857142857143,
+    "receiver_rate_hz": 30.742857142857144,
+    "sender_gamma_power": 0.5817176457628309,
+    "receiver_gamma_power": 0.7289090131605033,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.5135384702164488,
+    "granger_F_sr": 192.26890312427344,
+    "granger_F_rs": 103.03822702142926,
+    "transfer_entropy": 0.08791240044008092,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 2.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 2.0,
+    "seed": 0,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 31.671428571428574,
+    "receiver_rate_hz": 31.614285714285714,
+    "sender_gamma_power": 0.7058499932260178,
+    "receiver_gamma_power": 0.6979066456773583,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.5063011618254342,
+    "granger_F_sr": 163.36792108057094,
+    "granger_F_rs": 77.88247117598807,
+    "transfer_entropy": 0.11641315346002229,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 2.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 2.0,
+    "seed": 0,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 31.614285714285714,
+    "receiver_rate_hz": 32.1,
+    "sender_gamma_power": 0.35450737503579344,
+    "receiver_gamma_power": 0.22434323207472695,
+    "sender_peak_hz": 68.9655172413793,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.3483313422521464,
+    "granger_F_sr": 90.0513276458525,
+    "granger_F_rs": 145.57157819428363,
+    "transfer_entropy": 0.04916807281504664,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 2.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 2.0,
+    "seed": 0,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.642857142857146,
+    "receiver_rate_hz": 30.7,
+    "sender_gamma_power": 0.6217133072131654,
+    "receiver_gamma_power": 0.6934746499472083,
+    "sender_peak_hz": 51.72413793103448,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.29126699531013883,
+    "granger_F_sr": 91.77934798797828,
+    "granger_F_rs": 61.58509489753559,
+    "transfer_entropy": 0.07002507302992715,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 2.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 2.0,
+    "seed": 1,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 30.72857142857143,
+    "receiver_rate_hz": 31.242857142857147,
+    "sender_gamma_power": 0.37948235683803544,
+    "receiver_gamma_power": 0.561287260203331,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.5352605395824405,
+    "granger_F_sr": 117.65500777745937,
+    "granger_F_rs": 35.034275245006576,
+    "transfer_entropy": 0.05109996919253521,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 2.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 2.0,
+    "seed": 1,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 30.67142857142857,
+    "receiver_rate_hz": 31.285714285714285,
+    "sender_gamma_power": 0.4956816457205973,
+    "receiver_gamma_power": 0.5471897128538374,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.5543434915432527,
+    "granger_F_sr": 73.65269840406398,
+    "granger_F_rs": 66.12782503612586,
+    "transfer_entropy": 0.05700981448168833,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 2.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 2.0,
+    "seed": 1,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.900000000000002,
+    "receiver_rate_hz": 31.45714285714286,
+    "sender_gamma_power": 0.6042203250973595,
+    "receiver_gamma_power": 0.6205097289586872,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.25190654057389444,
+    "granger_F_sr": 71.32569723743055,
+    "granger_F_rs": 52.021900764804855,
+    "transfer_entropy": 0.055922598322701786,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 2.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 2.0,
+    "seed": 2,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 30.600000000000005,
+    "receiver_rate_hz": 31.08571428571429,
+    "sender_gamma_power": 0.3465594178381606,
+    "receiver_gamma_power": 0.9424738751547451,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.4666908248171713,
+    "granger_F_sr": 195.91902575778755,
+    "granger_F_rs": 28.396920202376876,
+    "transfer_entropy": 0.03997528982010372,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 2.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 2.0,
+    "seed": 2,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 30.842857142857145,
+    "receiver_rate_hz": 31.9,
+    "sender_gamma_power": 0.4572616026044868,
+    "receiver_gamma_power": 0.24950011395936428,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.4544541327225334,
+    "granger_F_sr": 78.48406106048999,
+    "granger_F_rs": 138.4285371879405,
+    "transfer_entropy": 0.0838201606229048,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 2.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 2.0,
+    "seed": 2,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.614285714285717,
+    "receiver_rate_hz": 30.957142857142863,
+    "sender_gamma_power": 0.25598560190560116,
+    "receiver_gamma_power": 0.5484981255010422,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.2576969015668973,
+    "granger_F_sr": 136.2979925601277,
+    "granger_F_rs": 83.38470941726752,
+    "transfer_entropy": 0.06557219092654909,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 2.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 2.0,
+    "seed": 3,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 31.55714285714286,
+    "receiver_rate_hz": 32.22857142857143,
+    "sender_gamma_power": 0.5981828776727053,
+    "receiver_gamma_power": 0.5484310654383348,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.3513044162434337,
+    "granger_F_sr": 82.10872290971737,
+    "granger_F_rs": 77.02852317061121,
+    "transfer_entropy": 0.053461375075858894,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 2.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 2.0,
+    "seed": 3,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 31.21428571428572,
+    "receiver_rate_hz": 31.614285714285714,
+    "sender_gamma_power": 0.37036797767555935,
+    "receiver_gamma_power": 0.7901290189328367,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.5614599078421701,
+    "granger_F_sr": 195.13620575835455,
+    "granger_F_rs": 97.56071591691004,
+    "transfer_entropy": 0.07615309580802068,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 2.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 2.0,
+    "seed": 3,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 28.857142857142858,
+    "receiver_rate_hz": 30.628571428571433,
+    "sender_gamma_power": 0.48604539673840935,
+    "receiver_gamma_power": 0.9376220491528875,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.4425810833905786,
+    "granger_F_sr": 166.70189743501172,
+    "granger_F_rs": 83.81769516270239,
+    "transfer_entropy": 0.09844106133796346,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 2.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 2.0,
+    "seed": 4,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 31.21428571428572,
+    "receiver_rate_hz": 30.742857142857144,
+    "sender_gamma_power": 0.7503076945858401,
+    "receiver_gamma_power": 0.4786029979535141,
+    "sender_peak_hz": 51.72413793103448,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.28030867836593804,
+    "granger_F_sr": 79.64516014215062,
+    "granger_F_rs": 82.77569368139781,
+    "transfer_entropy": 0.07526260310247201,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 2.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 2.0,
+    "seed": 4,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 31.22857142857143,
+    "receiver_rate_hz": 31.72857142857143,
+    "sender_gamma_power": 0.3210961273238015,
+    "receiver_gamma_power": 0.3439609704038834,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 77.58620689655172,
+    "gamma_coherence": 0.6417079108435988,
+    "granger_F_sr": 196.89212106218537,
+    "granger_F_rs": 93.06166415344472,
+    "transfer_entropy": 0.09223900434136481,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 2.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 2.0,
+    "seed": 4,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.7,
+    "receiver_rate_hz": 31.571428571428577,
+    "sender_gamma_power": 0.2783932226487167,
+    "receiver_gamma_power": 0.39661200467348706,
+    "sender_peak_hz": 51.72413793103448,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.28551109001430625,
+    "granger_F_sr": 117.19056559840323,
+    "granger_F_rs": 52.48787539018747,
+    "transfer_entropy": 0.0733578924842616,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 2.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 2.0,
+    "seed": 5,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 31.600000000000005,
+    "receiver_rate_hz": 31.400000000000002,
+    "sender_gamma_power": 0.239186175066516,
+    "receiver_gamma_power": 0.6639283219611515,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.6215685536250628,
+    "granger_F_sr": 241.00745889897482,
+    "granger_F_rs": 25.114988751763434,
+    "transfer_entropy": 0.08841909059947688,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 2.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 2.0,
+    "seed": 5,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 30.98571428571429,
+    "receiver_rate_hz": 31.057142857142857,
+    "sender_gamma_power": 0.3318508240693897,
+    "receiver_gamma_power": 0.46175085991491954,
+    "sender_peak_hz": 51.72413793103448,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.4855404294503546,
+    "granger_F_sr": 133.30880281775117,
+    "granger_F_rs": 36.34453763105531,
+    "transfer_entropy": 0.08737132698493764,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 2.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 2.0,
+    "seed": 5,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.028571428571432,
+    "receiver_rate_hz": 30.98571428571429,
+    "sender_gamma_power": 0.464222456232047,
+    "receiver_gamma_power": 0.6801588965148794,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.3931514764333498,
+    "granger_F_sr": 122.63663215223204,
+    "granger_F_rs": 65.54764300989534,
+    "transfer_entropy": 0.09083771912993208,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 2.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 2.0,
+    "seed": 6,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 30.78571428571429,
+    "receiver_rate_hz": 31.75714285714286,
+    "sender_gamma_power": 0.554418271411658,
+    "receiver_gamma_power": 0.5324445315908429,
+    "sender_peak_hz": 51.72413793103448,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.3502151594497744,
+    "granger_F_sr": 77.0077851050815,
+    "granger_F_rs": 72.70096770398469,
+    "transfer_entropy": 0.10647493897208037,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 2.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 2.0,
+    "seed": 6,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 31.55714285714286,
+    "receiver_rate_hz": 30.78571428571429,
+    "sender_gamma_power": 0.5937396741820689,
+    "receiver_gamma_power": 1.037772257920408,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.23796769680320023,
+    "granger_F_sr": 118.1643429587957,
+    "granger_F_rs": 28.47860323168607,
+    "transfer_entropy": 0.0804105801836315,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 2.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 2.0,
+    "seed": 6,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.6,
+    "receiver_rate_hz": 31.071428571428573,
+    "sender_gamma_power": 0.46541409632292735,
+    "receiver_gamma_power": 0.8018156858692381,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.28313863022382324,
+    "granger_F_sr": 97.04750873720337,
+    "granger_F_rs": 50.55846543219535,
+    "transfer_entropy": 0.044925581789205485,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 2.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 2.0,
+    "seed": 7,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 31.3,
+    "receiver_rate_hz": 30.642857142857142,
+    "sender_gamma_power": 0.2573980371332642,
+    "receiver_gamma_power": 0.514837010588891,
+    "sender_peak_hz": 51.72413793103448,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.6052788341684838,
+    "granger_F_sr": 207.75094927821567,
+    "granger_F_rs": 69.48603515045109,
+    "transfer_entropy": 0.09178262777985038,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 2.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 2.0,
+    "seed": 7,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 31.114285714285717,
+    "receiver_rate_hz": 30.85714285714286,
+    "sender_gamma_power": 0.45914471491092773,
+    "receiver_gamma_power": 0.8904220600173292,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.34007881795650263,
+    "granger_F_sr": 162.44854670548526,
+    "granger_F_rs": 67.82792591090134,
+    "transfer_entropy": 0.0606849999147775,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 2.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 2.0,
+    "seed": 7,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.92857142857143,
+    "receiver_rate_hz": 30.442857142857143,
+    "sender_gamma_power": 0.5817176457628309,
+    "receiver_gamma_power": 0.8379269069929338,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.519818441468191,
+    "granger_F_sr": 297.9412158060498,
+    "granger_F_rs": 118.23792361918723,
+    "transfer_entropy": 0.08247029446269553,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 4.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 4.0,
+    "seed": 0,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 31.671428571428574,
+    "receiver_rate_hz": 32.1,
+    "sender_gamma_power": 0.7058499932260178,
+    "receiver_gamma_power": 0.3668872655547316,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.31517396882408283,
+    "granger_F_sr": 64.62107529706407,
+    "granger_F_rs": 77.46055571986156,
+    "transfer_entropy": 0.10084536057084365,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 4.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 4.0,
+    "seed": 0,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 31.614285714285714,
+    "receiver_rate_hz": 32.07142857142857,
+    "sender_gamma_power": 0.35450737503579344,
+    "receiver_gamma_power": 0.19632930009263433,
+    "sender_peak_hz": 68.9655172413793,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.391286236396477,
+    "granger_F_sr": 108.23810293230073,
+    "granger_F_rs": 167.67551245400412,
+    "transfer_entropy": 0.07168242997443082,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 4.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 4.0,
+    "seed": 0,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.642857142857146,
+    "receiver_rate_hz": 31.21428571428572,
+    "sender_gamma_power": 0.6217133072131654,
+    "receiver_gamma_power": 0.2743263918542208,
+    "sender_peak_hz": 51.72413793103448,
+    "receiver_peak_hz": 51.72413793103448,
+    "gamma_coherence": 0.5990410809920637,
+    "granger_F_sr": 45.595607185290554,
+    "granger_F_rs": 254.35065513636974,
+    "transfer_entropy": 0.09055981187979305,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 4.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 4.0,
+    "seed": 1,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 30.72857142857143,
+    "receiver_rate_hz": 30.928571428571427,
+    "sender_gamma_power": 0.37948235683803544,
+    "receiver_gamma_power": 0.397357878712557,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 86.20689655172413,
+    "gamma_coherence": 0.44524618071299876,
+    "granger_F_sr": 100.6192611507625,
+    "granger_F_rs": 49.17286875358831,
+    "transfer_entropy": 0.061376975606574,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 4.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 4.0,
+    "seed": 1,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 30.67142857142857,
+    "receiver_rate_hz": 31.3,
+    "sender_gamma_power": 0.4956816457205973,
+    "receiver_gamma_power": 0.39320449597069324,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.48316282185157433,
+    "granger_F_sr": 68.50925454402898,
+    "granger_F_rs": 155.31029096921756,
+    "transfer_entropy": 0.09268181712756306,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 4.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 4.0,
+    "seed": 1,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.900000000000002,
+    "receiver_rate_hz": 31.54285714285714,
+    "sender_gamma_power": 0.6042203250973595,
+    "receiver_gamma_power": 0.4931673948804939,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.3452276832796814,
+    "granger_F_sr": 102.18222660643654,
+    "granger_F_rs": 95.46034410327324,
+    "transfer_entropy": 0.09256333552465003,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 4.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 4.0,
+    "seed": 2,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 30.600000000000005,
+    "receiver_rate_hz": 31.31428571428572,
+    "sender_gamma_power": 0.3465594178381606,
+    "receiver_gamma_power": 0.6102392403062106,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.4052988304335066,
+    "granger_F_sr": 116.2687884371407,
+    "granger_F_rs": 28.791890270543917,
+    "transfer_entropy": 0.062285161814654696,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 4.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 4.0,
+    "seed": 2,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 30.842857142857145,
+    "receiver_rate_hz": 32.17142857142857,
+    "sender_gamma_power": 0.4572616026044868,
+    "receiver_gamma_power": 0.4514685393343817,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.3778816765562725,
+    "granger_F_sr": 80.6708120207984,
+    "granger_F_rs": 75.69270856891302,
+    "transfer_entropy": 0.029986369554069837,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 4.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 4.0,
+    "seed": 2,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.614285714285717,
+    "receiver_rate_hz": 31.22857142857143,
+    "sender_gamma_power": 0.25598560190560116,
+    "receiver_gamma_power": 0.47459480499031825,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.14633415935834176,
+    "granger_F_sr": 100.94793357584184,
+    "granger_F_rs": 90.44111750892053,
+    "transfer_entropy": 0.066211361021258,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 4.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 4.0,
+    "seed": 3,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 31.55714285714286,
+    "receiver_rate_hz": 32.1,
+    "sender_gamma_power": 0.5981828776727053,
+    "receiver_gamma_power": 1.10141526612463,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.31783302781796025,
+    "granger_F_sr": 153.35162482541963,
+    "granger_F_rs": 23.75320558398707,
+    "transfer_entropy": 0.10144287788931038,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 4.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 4.0,
+    "seed": 3,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 31.21428571428572,
+    "receiver_rate_hz": 31.95714285714286,
+    "sender_gamma_power": 0.37036797767555935,
+    "receiver_gamma_power": 0.32791280330115496,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.3915151496883227,
+    "granger_F_sr": 114.39177902752077,
+    "granger_F_rs": 123.61888880692213,
+    "transfer_entropy": 0.07440420070583824,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 4.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 4.0,
+    "seed": 3,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 28.857142857142858,
+    "receiver_rate_hz": 30.400000000000002,
+    "sender_gamma_power": 0.48604539673840935,
+    "receiver_gamma_power": 0.9599182197763979,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.4742134023502126,
+    "granger_F_sr": 169.5489847715628,
+    "granger_F_rs": 39.85051105126816,
+    "transfer_entropy": 0.12799075668367454,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 4.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 4.0,
+    "seed": 4,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 31.21428571428572,
+    "receiver_rate_hz": 30.814285714285717,
+    "sender_gamma_power": 0.7503076945858401,
+    "receiver_gamma_power": 0.6484005765881472,
+    "sender_peak_hz": 51.72413793103448,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.3086740287913093,
+    "granger_F_sr": 88.77652663512505,
+    "granger_F_rs": 91.4490556785444,
+    "transfer_entropy": 0.08843804462359373,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 4.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 4.0,
+    "seed": 4,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 31.22857142857143,
+    "receiver_rate_hz": 31.62857142857143,
+    "sender_gamma_power": 0.3210961273238015,
+    "receiver_gamma_power": 0.2738092239999771,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.43677246859304847,
+    "granger_F_sr": 118.88727434620273,
+    "granger_F_rs": 112.99695255145659,
+    "transfer_entropy": 0.11257128453685353,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 4.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 4.0,
+    "seed": 4,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.7,
+    "receiver_rate_hz": 31.528571428571432,
+    "sender_gamma_power": 0.2783932226487167,
+    "receiver_gamma_power": 0.834887293174163,
+    "sender_peak_hz": 51.72413793103448,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.4410604424254965,
+    "granger_F_sr": 142.28531097354318,
+    "granger_F_rs": 15.091244697220521,
+    "transfer_entropy": 0.08525558273981572,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 4.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 4.0,
+    "seed": 5,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 31.600000000000005,
+    "receiver_rate_hz": 31.742857142857144,
+    "sender_gamma_power": 0.239186175066516,
+    "receiver_gamma_power": 0.18463317633819054,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 34.48275862068965,
+    "gamma_coherence": 0.5644812079374191,
+    "granger_F_sr": 200.94210880720962,
+    "granger_F_rs": 138.1159788613344,
+    "transfer_entropy": 0.05147633026638704,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 4.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 4.0,
+    "seed": 5,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 30.98571428571429,
+    "receiver_rate_hz": 31.12857142857143,
+    "sender_gamma_power": 0.3318508240693897,
+    "receiver_gamma_power": 0.5573544538820664,
+    "sender_peak_hz": 51.72413793103448,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.22183599421691852,
+    "granger_F_sr": 151.40835267551265,
+    "granger_F_rs": 51.81229597098525,
+    "transfer_entropy": 0.07099730136431469,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 4.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 4.0,
+    "seed": 5,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.028571428571432,
+    "receiver_rate_hz": 30.7,
+    "sender_gamma_power": 0.464222456232047,
+    "receiver_gamma_power": 0.6348179797741559,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.5026715343136591,
+    "granger_F_sr": 155.8747137534243,
+    "granger_F_rs": 48.30169462943192,
+    "transfer_entropy": 0.07562530337693549,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 4.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 4.0,
+    "seed": 6,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 30.78571428571429,
+    "receiver_rate_hz": 31.31428571428572,
+    "sender_gamma_power": 0.554418271411658,
+    "receiver_gamma_power": 0.6870346430732386,
+    "sender_peak_hz": 51.72413793103448,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.28727305803581993,
+    "granger_F_sr": 88.33907881934884,
+    "granger_F_rs": 51.71556804849733,
+    "transfer_entropy": 0.08723708889515591,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 4.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 4.0,
+    "seed": 6,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 31.55714285714286,
+    "receiver_rate_hz": 31.271428571428576,
+    "sender_gamma_power": 0.5937396741820689,
+    "receiver_gamma_power": 0.3973733422063125,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 77.58620689655172,
+    "gamma_coherence": 0.4839388043721714,
+    "granger_F_sr": 131.22460087857704,
+    "granger_F_rs": 76.88649580136745,
+    "transfer_entropy": 0.09950436906304681,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 4.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 4.0,
+    "seed": 6,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.6,
+    "receiver_rate_hz": 31.514285714285716,
+    "sender_gamma_power": 0.46541409632292735,
+    "receiver_gamma_power": 0.9880290889675266,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.3826177913861451,
+    "granger_F_sr": 197.27428024369976,
+    "granger_F_rs": 61.74276636428514,
+    "transfer_entropy": 0.07056906889988765,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 4.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 4.0,
+    "seed": 7,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 31.3,
+    "receiver_rate_hz": 30.685714285714287,
+    "sender_gamma_power": 0.2573980371332642,
+    "receiver_gamma_power": 0.3104527608388227,
+    "sender_peak_hz": 51.72413793103448,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.4550090200573652,
+    "granger_F_sr": 66.00425375000607,
+    "granger_F_rs": 61.66354843060198,
+    "transfer_entropy": 0.06993665224565056,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 4.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 4.0,
+    "seed": 7,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 31.114285714285717,
+    "receiver_rate_hz": 30.98571428571429,
+    "sender_gamma_power": 0.45914471491092773,
+    "receiver_gamma_power": 0.49707541683946904,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.48490959730690436,
+    "granger_F_sr": 166.37193496901074,
+    "granger_F_rs": 65.26697682461787,
+    "transfer_entropy": 0.10366120698909546,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 4.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 4.0,
+    "seed": 7,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.92857142857143,
+    "receiver_rate_hz": 30.47142857142857,
+    "sender_gamma_power": 0.5817176457628309,
+    "receiver_gamma_power": 0.9910479672112749,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.41556639520965133,
+    "granger_F_sr": 183.57590054209857,
+    "granger_F_rs": 76.16401761361311,
+    "transfer_entropy": 0.07238796370644304,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 6.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 6.0,
+    "seed": 0,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 31.671428571428574,
+    "receiver_rate_hz": 32.38571428571429,
+    "sender_gamma_power": 0.7058499932260178,
+    "receiver_gamma_power": 0.4273681056782164,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.4477330413233215,
+    "granger_F_sr": 54.94207231881829,
+    "granger_F_rs": 71.82473539759708,
+    "transfer_entropy": 0.0653166466819813,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 6.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 6.0,
+    "seed": 0,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 31.614285714285714,
+    "receiver_rate_hz": 32.02857142857143,
+    "sender_gamma_power": 0.35450737503579344,
+    "receiver_gamma_power": 0.5987897597119334,
+    "sender_peak_hz": 68.9655172413793,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.3203851943880345,
+    "granger_F_sr": 118.01018920626167,
+    "granger_F_rs": 48.47053518221246,
+    "transfer_entropy": 0.047544061950346855,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 6.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 6.0,
+    "seed": 0,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.642857142857146,
+    "receiver_rate_hz": 31.42857142857143,
+    "sender_gamma_power": 0.6217133072131654,
+    "receiver_gamma_power": 0.5501077060241107,
+    "sender_peak_hz": 51.72413793103448,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.3092907662023664,
+    "granger_F_sr": 50.14530003095739,
+    "granger_F_rs": 61.144165524301854,
+    "transfer_entropy": 0.04509810816910291,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 6.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 6.0,
+    "seed": 1,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 30.72857142857143,
+    "receiver_rate_hz": 30.88571428571429,
+    "sender_gamma_power": 0.37948235683803544,
+    "receiver_gamma_power": 0.46621924304251205,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.4382348242045249,
+    "granger_F_sr": 86.9792240839257,
+    "granger_F_rs": 68.50718324202201,
+    "transfer_entropy": 0.05659241944225627,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 6.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 6.0,
+    "seed": 1,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 30.67142857142857,
+    "receiver_rate_hz": 31.02857142857143,
+    "sender_gamma_power": 0.4956816457205973,
+    "receiver_gamma_power": 0.5744697036056304,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.4786350043082632,
+    "granger_F_sr": 80.91269279514917,
+    "granger_F_rs": 58.54398537775554,
+    "transfer_entropy": 0.07295439988733521,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 6.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 6.0,
+    "seed": 1,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.900000000000002,
+    "receiver_rate_hz": 31.171428571428574,
+    "sender_gamma_power": 0.6042203250973595,
+    "receiver_gamma_power": 1.1779367311567885,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.3514154664008763,
+    "granger_F_sr": 181.13971678690788,
+    "granger_F_rs": 55.81286824648597,
+    "transfer_entropy": 0.10952629947383226,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 6.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 6.0,
+    "seed": 2,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 30.600000000000005,
+    "receiver_rate_hz": 31.585714285714285,
+    "sender_gamma_power": 0.3465594178381606,
+    "receiver_gamma_power": 0.5150253560963176,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.4152213552880858,
+    "granger_F_sr": 137.71945813308088,
+    "granger_F_rs": 46.448101654028,
+    "transfer_entropy": 0.05972477248310278,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 6.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 6.0,
+    "seed": 2,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 30.842857142857145,
+    "receiver_rate_hz": 31.942857142857143,
+    "sender_gamma_power": 0.4572616026044868,
+    "receiver_gamma_power": 0.35982647090584985,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.4246080462437849,
+    "granger_F_sr": 64.73468088795909,
+    "granger_F_rs": 103.78679014324403,
+    "transfer_entropy": 0.0544375532676731,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 6.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 6.0,
+    "seed": 2,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.614285714285717,
+    "receiver_rate_hz": 31.357142857142858,
+    "sender_gamma_power": 0.25598560190560116,
+    "receiver_gamma_power": 0.9951478461504225,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.31128288310008395,
+    "granger_F_sr": 168.50506506704613,
+    "granger_F_rs": 38.36736521052124,
+    "transfer_entropy": 0.055161219043935616,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 6.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 6.0,
+    "seed": 3,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 31.55714285714286,
+    "receiver_rate_hz": 32.457142857142856,
+    "sender_gamma_power": 0.5981828776727053,
+    "receiver_gamma_power": 0.6099624667062944,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.3264419790812624,
+    "granger_F_sr": 99.05823393233753,
+    "granger_F_rs": 71.05873420857938,
+    "transfer_entropy": 0.058687842970802484,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 6.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 6.0,
+    "seed": 3,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 31.21428571428572,
+    "receiver_rate_hz": 31.9,
+    "sender_gamma_power": 0.37036797767555935,
+    "receiver_gamma_power": 0.4308236378046728,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.35874943776171536,
+    "granger_F_sr": 132.66229002871043,
+    "granger_F_rs": 123.92167176696132,
+    "transfer_entropy": 0.06210446489241092,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 6.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 6.0,
+    "seed": 3,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 28.857142857142858,
+    "receiver_rate_hz": 30.58571428571429,
+    "sender_gamma_power": 0.48604539673840935,
+    "receiver_gamma_power": 0.5136418792067948,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.3760140946849699,
+    "granger_F_sr": 82.59570088955356,
+    "granger_F_rs": 65.78760990283858,
+    "transfer_entropy": 0.08683608151880393,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 6.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 6.0,
+    "seed": 4,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 31.21428571428572,
+    "receiver_rate_hz": 31.057142857142857,
+    "sender_gamma_power": 0.7503076945858401,
+    "receiver_gamma_power": 0.39244893038780565,
+    "sender_peak_hz": 51.72413793103448,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.41307153739282854,
+    "granger_F_sr": 52.045960744483494,
+    "granger_F_rs": 92.04261904241906,
+    "transfer_entropy": 0.0899762450635987,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 6.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 6.0,
+    "seed": 4,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 31.22857142857143,
+    "receiver_rate_hz": 31.528571428571432,
+    "sender_gamma_power": 0.3210961273238015,
+    "receiver_gamma_power": 0.24093962300962118,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 34.48275862068965,
+    "gamma_coherence": 0.3546931418013496,
+    "granger_F_sr": 113.96230778264682,
+    "granger_F_rs": 133.93445606709543,
+    "transfer_entropy": 0.0835804843237806,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 6.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 6.0,
+    "seed": 4,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.7,
+    "receiver_rate_hz": 31.571428571428577,
+    "sender_gamma_power": 0.2783932226487167,
+    "receiver_gamma_power": 0.49938354570905036,
+    "sender_peak_hz": 51.72413793103448,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.4496197017457013,
+    "granger_F_sr": 74.5545097566248,
+    "granger_F_rs": 39.98181992710127,
+    "transfer_entropy": 0.07880372093360338,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 6.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 6.0,
+    "seed": 5,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 31.600000000000005,
+    "receiver_rate_hz": 31.342857142857145,
+    "sender_gamma_power": 0.239186175066516,
+    "receiver_gamma_power": 0.34766691874418,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.37561278727646463,
+    "granger_F_sr": 137.78140604922345,
+    "granger_F_rs": 44.026201043843486,
+    "transfer_entropy": 0.09758748147365179,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 6.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 6.0,
+    "seed": 5,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 30.98571428571429,
+    "receiver_rate_hz": 30.957142857142863,
+    "sender_gamma_power": 0.3318508240693897,
+    "receiver_gamma_power": 0.9561234768898188,
+    "sender_peak_hz": 51.72413793103448,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.3280137929703796,
+    "granger_F_sr": 224.94766299059646,
+    "granger_F_rs": 55.787813336708794,
+    "transfer_entropy": 0.07941968543345103,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 6.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 6.0,
+    "seed": 5,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.028571428571432,
+    "receiver_rate_hz": 31.22857142857143,
+    "sender_gamma_power": 0.464222456232047,
+    "receiver_gamma_power": 1.1126039701616344,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.39462209961837436,
+    "granger_F_sr": 197.05834550026617,
+    "granger_F_rs": 56.66918567461344,
+    "transfer_entropy": 0.09437627489251829,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 6.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 6.0,
+    "seed": 6,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 30.78571428571429,
+    "receiver_rate_hz": 31.08571428571429,
+    "sender_gamma_power": 0.554418271411658,
+    "receiver_gamma_power": 0.5749482624228073,
+    "sender_peak_hz": 51.72413793103448,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.3730068906199827,
+    "granger_F_sr": 101.42235195743613,
+    "granger_F_rs": 57.14541124324955,
+    "transfer_entropy": 0.085862898440926,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 6.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 6.0,
+    "seed": 6,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 31.55714285714286,
+    "receiver_rate_hz": 31.21428571428572,
+    "sender_gamma_power": 0.5937396741820689,
+    "receiver_gamma_power": 0.6411256455371352,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.35266175726225873,
+    "granger_F_sr": 87.55410877598987,
+    "granger_F_rs": 50.64096157447241,
+    "transfer_entropy": 0.06847208668012066,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 6.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 6.0,
+    "seed": 6,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.6,
+    "receiver_rate_hz": 31.55714285714286,
+    "sender_gamma_power": 0.46541409632292735,
+    "receiver_gamma_power": 0.37532555875508705,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.18241343317608336,
+    "granger_F_sr": 112.5380769544576,
+    "granger_F_rs": 88.19979369297289,
+    "transfer_entropy": 0.0986224556746358,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 6.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 6.0,
+    "seed": 7,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 31.3,
+    "receiver_rate_hz": 30.85714285714286,
+    "sender_gamma_power": 0.2573980371332642,
+    "receiver_gamma_power": 0.4024686774403232,
+    "sender_peak_hz": 51.72413793103448,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.3650040560843865,
+    "granger_F_sr": 95.09704606940932,
+    "granger_F_rs": 61.62079017828299,
+    "transfer_entropy": 0.06147967833212993,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 6.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 6.0,
+    "seed": 7,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 31.114285714285717,
+    "receiver_rate_hz": 31.271428571428576,
+    "sender_gamma_power": 0.45914471491092773,
+    "receiver_gamma_power": 0.6357996654210811,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.4573069726764612,
+    "granger_F_sr": 101.0973483816776,
+    "granger_F_rs": 49.7209270079726,
+    "transfer_entropy": 0.05281592963757218,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 6.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 6.0,
+    "seed": 7,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.92857142857143,
+    "receiver_rate_hz": 30.67142857142857,
+    "sender_gamma_power": 0.5817176457628309,
+    "receiver_gamma_power": 0.5620697871729691,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.27867303866399545,
+    "granger_F_sr": 98.92728659563967,
+    "granger_F_rs": 99.17033891594102,
+    "transfer_entropy": 0.08848096057856605,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 8.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 8.0,
+    "seed": 0,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 31.671428571428574,
+    "receiver_rate_hz": 32.25714285714286,
+    "sender_gamma_power": 0.7058499932260178,
+    "receiver_gamma_power": 0.7993776856118255,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.40801852969923535,
+    "granger_F_sr": 99.19580652588795,
+    "granger_F_rs": 67.04372998994472,
+    "transfer_entropy": 0.1058192515873617,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 8.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 8.0,
+    "seed": 0,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 31.614285714285714,
+    "receiver_rate_hz": 32.25714285714286,
+    "sender_gamma_power": 0.35450737503579344,
+    "receiver_gamma_power": 0.5156256030992484,
+    "sender_peak_hz": 68.9655172413793,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.28189393222308007,
+    "granger_F_sr": 86.10568740517593,
+    "granger_F_rs": 50.40754372723315,
+    "transfer_entropy": 0.06624683883560299,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 8.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 8.0,
+    "seed": 0,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.642857142857146,
+    "receiver_rate_hz": 31.400000000000002,
+    "sender_gamma_power": 0.6217133072131654,
+    "receiver_gamma_power": 0.34932765480347117,
+    "sender_peak_hz": 51.72413793103448,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.3011576323040203,
+    "granger_F_sr": 48.25281444826991,
+    "granger_F_rs": 92.60908234162261,
+    "transfer_entropy": 0.07006130118903361,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 8.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 8.0,
+    "seed": 1,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 30.72857142857143,
+    "receiver_rate_hz": 31.171428571428574,
+    "sender_gamma_power": 0.37948235683803544,
+    "receiver_gamma_power": 0.3068799524363294,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.42111345201629796,
+    "granger_F_sr": 47.41251249062352,
+    "granger_F_rs": 63.48833336168619,
+    "transfer_entropy": 0.06288668410824223,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 8.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 8.0,
+    "seed": 1,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 30.67142857142857,
+    "receiver_rate_hz": 31.042857142857144,
+    "sender_gamma_power": 0.4956816457205973,
+    "receiver_gamma_power": 0.533425648986341,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.6263128255249992,
+    "granger_F_sr": 88.20167997083638,
+    "granger_F_rs": 71.28213877954,
+    "transfer_entropy": 0.06435245259782232,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 8.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 8.0,
+    "seed": 1,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.900000000000002,
+    "receiver_rate_hz": 31.242857142857147,
+    "sender_gamma_power": 0.6042203250973595,
+    "receiver_gamma_power": 1.1608860070516491,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.35182577488493605,
+    "granger_F_sr": 189.08839346281593,
+    "granger_F_rs": 74.17950908073375,
+    "transfer_entropy": 0.09853925197493636,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 8.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 8.0,
+    "seed": 2,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 30.600000000000005,
+    "receiver_rate_hz": 31.31428571428572,
+    "sender_gamma_power": 0.3465594178381606,
+    "receiver_gamma_power": 0.940501072420559,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.5097198821269869,
+    "granger_F_sr": 255.06250082213742,
+    "granger_F_rs": 65.37382862202223,
+    "transfer_entropy": 0.0806256628406794,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 8.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 8.0,
+    "seed": 2,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 30.842857142857145,
+    "receiver_rate_hz": 31.942857142857143,
+    "sender_gamma_power": 0.4572616026044868,
+    "receiver_gamma_power": 0.4873821658826737,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.49409016743632617,
+    "granger_F_sr": 45.774395013283595,
+    "granger_F_rs": 47.40656189106465,
+    "transfer_entropy": 0.05248305578611754,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 8.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 8.0,
+    "seed": 2,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.614285714285717,
+    "receiver_rate_hz": 30.900000000000002,
+    "sender_gamma_power": 0.25598560190560116,
+    "receiver_gamma_power": 0.6451820957607506,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.2911022258154087,
+    "granger_F_sr": 127.92813281176763,
+    "granger_F_rs": 56.32944743606382,
+    "transfer_entropy": 0.08768022310874332,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 8.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 8.0,
+    "seed": 3,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 31.55714285714286,
+    "receiver_rate_hz": 32.22857142857143,
+    "sender_gamma_power": 0.5981828776727053,
+    "receiver_gamma_power": 0.7675756330165514,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.2559223539558349,
+    "granger_F_sr": 120.7855257535435,
+    "granger_F_rs": 65.07778833176576,
+    "transfer_entropy": 0.0933843257169193,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 8.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 8.0,
+    "seed": 3,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 31.21428571428572,
+    "receiver_rate_hz": 31.75714285714286,
+    "sender_gamma_power": 0.37036797767555935,
+    "receiver_gamma_power": 0.28107745934970685,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 86.20689655172413,
+    "gamma_coherence": 0.4042747810147796,
+    "granger_F_sr": 91.15117466829929,
+    "granger_F_rs": 89.70915742839574,
+    "transfer_entropy": 0.09949646732482596,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 8.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 8.0,
+    "seed": 3,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 28.857142857142858,
+    "receiver_rate_hz": 30.414285714285715,
+    "sender_gamma_power": 0.48604539673840935,
+    "receiver_gamma_power": 0.6644059119085101,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.33772091737719434,
+    "granger_F_sr": 76.77432004498424,
+    "granger_F_rs": 61.96875133024613,
+    "transfer_entropy": 0.0742707368873107,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 8.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 8.0,
+    "seed": 4,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 31.21428571428572,
+    "receiver_rate_hz": 30.914285714285718,
+    "sender_gamma_power": 0.7503076945858401,
+    "receiver_gamma_power": 0.46702878917704227,
+    "sender_peak_hz": 51.72413793103448,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.5260248083003456,
+    "granger_F_sr": 60.54939721867903,
+    "granger_F_rs": 62.4432585771316,
+    "transfer_entropy": 0.09476922581009023,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 8.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 8.0,
+    "seed": 4,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 31.22857142857143,
+    "receiver_rate_hz": 31.614285714285714,
+    "sender_gamma_power": 0.3210961273238015,
+    "receiver_gamma_power": 0.20772095371331753,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 86.20689655172413,
+    "gamma_coherence": 0.3159422580028772,
+    "granger_F_sr": 45.61490756666189,
+    "granger_F_rs": 98.8799616767984,
+    "transfer_entropy": 0.07565720196944825,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 8.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 8.0,
+    "seed": 4,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.7,
+    "receiver_rate_hz": 31.528571428571432,
+    "sender_gamma_power": 0.2783932226487167,
+    "receiver_gamma_power": 0.4294646787678217,
+    "sender_peak_hz": 51.72413793103448,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.33873084589630525,
+    "granger_F_sr": 83.9426889708419,
+    "granger_F_rs": 58.18590867624516,
+    "transfer_entropy": 0.0709970054300747,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 8.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 8.0,
+    "seed": 5,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 31.600000000000005,
+    "receiver_rate_hz": 31.571428571428577,
+    "sender_gamma_power": 0.239186175066516,
+    "receiver_gamma_power": 0.9651467113927273,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.35434618729394846,
+    "granger_F_sr": 243.74163744655888,
+    "granger_F_rs": 66.78196946375644,
+    "transfer_entropy": 0.05388976184917273,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 8.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 8.0,
+    "seed": 5,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 30.98571428571429,
+    "receiver_rate_hz": 31.114285714285717,
+    "sender_gamma_power": 0.3318508240693897,
+    "receiver_gamma_power": 0.38085303690418787,
+    "sender_peak_hz": 51.72413793103448,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.45450809914752544,
+    "granger_F_sr": 128.07854333348985,
+    "granger_F_rs": 62.863153730039144,
+    "transfer_entropy": 0.08524581047420503,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 8.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 8.0,
+    "seed": 5,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.028571428571432,
+    "receiver_rate_hz": 30.78571428571429,
+    "sender_gamma_power": 0.464222456232047,
+    "receiver_gamma_power": 1.654258197797185,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.422563135943567,
+    "granger_F_sr": 168.98085075664383,
+    "granger_F_rs": 57.58137330869107,
+    "transfer_entropy": 0.07326384166983962,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 8.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 8.0,
+    "seed": 6,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 30.78571428571429,
+    "receiver_rate_hz": 31.357142857142858,
+    "sender_gamma_power": 0.554418271411658,
+    "receiver_gamma_power": 1.0907259163708667,
+    "sender_peak_hz": 51.72413793103448,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.38055496018030405,
+    "granger_F_sr": 107.39579427660719,
+    "granger_F_rs": 52.56530978461274,
+    "transfer_entropy": 0.05700959436610321,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 8.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 8.0,
+    "seed": 6,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 31.55714285714286,
+    "receiver_rate_hz": 30.742857142857144,
+    "sender_gamma_power": 0.5937396741820689,
+    "receiver_gamma_power": 0.9297099159444036,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.3127529486315301,
+    "granger_F_sr": 149.8124706280361,
+    "granger_F_rs": 63.539255685276125,
+    "transfer_entropy": 0.07315419026142042,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 8.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 8.0,
+    "seed": 6,
+    "stim_id": 2
+  },
+  {
+    "sender_rate_hz": 29.6,
+    "receiver_rate_hz": 31.671428571428574,
+    "sender_gamma_power": 0.46541409632292735,
+    "receiver_gamma_power": 0.49521928026616996,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 68.9655172413793,
+    "gamma_coherence": 0.3547834943704661,
+    "granger_F_sr": 79.5720571151377,
+    "granger_F_rs": 85.10894911431649,
+    "transfer_entropy": 0.09487266822221996,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 8.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 8.0,
+    "seed": 7,
+    "stim_id": 0
+  },
+  {
+    "sender_rate_hz": 31.3,
+    "receiver_rate_hz": 30.85714285714286,
+    "sender_gamma_power": 0.2573980371332642,
+    "receiver_gamma_power": 0.5901541983447214,
+    "sender_peak_hz": 51.72413793103448,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.2692828811169456,
+    "granger_F_sr": 141.50253276966572,
+    "granger_F_rs": 93.57834310095087,
+    "transfer_entropy": 0.11329006487686603,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 8.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 8.0,
+    "seed": 7,
+    "stim_id": 1
+  },
+  {
+    "sender_rate_hz": 31.114285714285717,
+    "receiver_rate_hz": 30.88571428571429,
+    "sender_gamma_power": 0.45914471491092773,
+    "receiver_gamma_power": 0.8721495859098037,
+    "sender_peak_hz": 60.34482758620689,
+    "receiver_peak_hz": 60.34482758620689,
+    "gamma_coherence": 0.4856393223612197,
+    "granger_F_sr": 212.42908835517545,
+    "granger_F_rs": 114.55559278821981,
+    "transfer_entropy": 0.09059402644785941,
+    "config_dict": {
+      "channel": {
+        "delay_ms": 8.0,
+        "__type__": "IntactChannel"
+      },
+      "duration_ms": 500.0,
+      "transient_ms": 150.0
+    },
+    "delay_ms": 8.0,
+    "seed": 7,
+    "stim_id": 2
+  }
+]

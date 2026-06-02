@@ -1,0 +1,24 @@
+{
+  "test": "wilcoxon",
+  "intact_vs_scramble": {
+    "W": 1.5,
+    "p": 1.0,
+    "n_seeds": 6,
+    "intact_per_seed": [
+      1.0,
+      1.0,
+      1.0,
+      0.75,
+      0.75,
+      0.75
+    ],
+    "scramble_per_seed": [
+      0.75,
+      1.0,
+      1.0,
+      0.75,
+      1.0,
+      0.75
+    ]
+  }
+}

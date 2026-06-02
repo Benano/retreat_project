@@ -97,6 +97,42 @@ def try_one(cfg: PINGConfig, duration_ms=1500.0, seed=0, transient_ms=500.0):
     }
 
 
+def calibration_check(cfg: PINGConfig, label: str, duration_ms=1200.0,
+                      out_dir=None, seeds=(0, 1, 2)):
+    """Verify Section 5.5 benchmarks for a fixed PINGConfig (used for full-scale
+    drift check at task 6/S4)."""
+    out_dir = out_dir or os.path.join(os.path.dirname(__file__), "..", "figures", "calibration")
+    os.makedirs(out_dir, exist_ok=True)
+    summaries = []
+    for seed in seeds:
+        r = try_one(cfg, duration_ms=duration_ms, seed=seed)
+        summaries.append(r)
+    peaks = [r["peak_f"] for r in summaries if r["peak_f"] is not None]
+    lags = [r["ei_lag_ms"] for r in summaries]
+    out = {
+        "label": label,
+        "N_E": cfg.N_E, "N_I": cfg.N_I,
+        "peak_hz_per_seed": peaks,
+        "peak_hz_mean": float(np.mean(peaks)) if peaks else None,
+        "peak_hz_std": float(np.std(peaks, ddof=1)) if len(peaks) > 1 else 0.0,
+        "ei_lag_ms_per_seed": lags,
+        "ei_lag_ms_mean": float(np.mean(lags)),
+        "pop_rate_E_hz_mean": float(np.mean([r["popE_mean"] for r in summaries])),
+        "per_cell_E_med_hz_mean": float(np.mean([r["perE_med"] for r in summaries])),
+        "duration_ms": duration_ms,
+        "transient_ms": 500.0,
+        "n_seeds": len(seeds),
+    }
+    save_path = os.path.join(out_dir, f"calibration_{label}.json")
+    with open(save_path, "w") as fh:
+        json.dump(out, fh, indent=2)
+    print(f"\n[{label}] gamma peak: {out['peak_hz_mean']} ± {out['peak_hz_std']:.2f} Hz "
+          f"(per seed {peaks}); E→I lag: {out['ei_lag_ms_mean']:.2f} ms; "
+          f"pop E rate {out['pop_rate_E_hz_mean']:.1f} Hz")
+    print(f"  saved {save_path}")
+    return out
+
+
 def main():
     out_dir = os.path.join(os.path.dirname(__file__), "..", "figures", "calibration")
     os.makedirs(out_dir, exist_ok=True)

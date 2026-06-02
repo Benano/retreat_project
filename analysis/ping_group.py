@@ -89,6 +89,12 @@ class PINGConfig:
     dt: float = 0.1            # ms
     name: str = "G"            # group name prefix
 
+    # H3: disable_oscillation flag. When True, set within-group E↔I coupling
+    # to zero so the receiver cannot generate its own gamma rhythm. Used to
+    # ask whether receiver oscillation is required for phase-gating
+    # (spec §3, Table H3).
+    disable_oscillation: bool = False
+
     def to_dict(self) -> dict:
         return asdict(self)
 
@@ -169,15 +175,22 @@ class PINGGroup:
         self.I.I_drive = c.drive_I * pA
 
         # ---- Within-group synapses --------------------------------------
+        # If disable_oscillation is set, zero the E↔I coupling that gives the
+        # PING rhythm. E→E and I→I are kept so the group still has its
+        # baseline recurrent statistics; only the rhythm-generating loop is
+        # broken. (H3 manipulation, spec §3 Table.)
+        g_EI_eff = 0.0 if c.disable_oscillation else c.g_EI
+        g_IE_eff = 0.0 if c.disable_oscillation else c.g_IE
+
         self.S_EE = b2.Synapses(self.E, self.E, on_pre=f"g_e_post += {c.g_EE}*nS",
                                 delay=c.delay_intra * ms, name=f"{ns}_S_EE")
         self.S_EE.connect(p=c.p_EE, condition="i != j")
 
-        self.S_EI = b2.Synapses(self.E, self.I, on_pre=f"g_e_post += {c.g_EI}*nS",
+        self.S_EI = b2.Synapses(self.E, self.I, on_pre=f"g_e_post += {g_EI_eff}*nS",
                                 delay=c.delay_intra * ms, name=f"{ns}_S_EI")
         self.S_EI.connect(p=c.p_EI)
 
-        self.S_IE = b2.Synapses(self.I, self.E, on_pre=f"g_i_post += {c.g_IE}*nS",
+        self.S_IE = b2.Synapses(self.I, self.E, on_pre=f"g_i_post += {g_IE_eff}*nS",
                                 delay=c.delay_intra * ms, name=f"{ns}_S_IE")
         self.S_IE.connect(p=c.p_IE)
 

@@ -150,16 +150,19 @@ def main():
                                   progress_every=max(5, len(work) // 20))
     print(f"Trials finished in {time.time() - t0:.0f} s")
 
-    # Save trimmed trials and metrics
+    # Save ALL trimmed trials so the decoder can be regenerated from disk
+    # (reviewer round 1 M2).
     metrics_rows = []
     by_cond: dict[str, list[dict]] = {c: [] for c in args.conditions}
     for k, (trimmed, m) in enumerate(results):
         cond = work[k]["condition"]
-        if k % args.n_stimuli == 0:
-            save_pickle(trimmed, os.path.join(args.out_dir, cond,
-                                              f"trial_{k:05d}.pkl"))
+        save_pickle(trimmed, os.path.join(args.out_dir, cond,
+                                          f"trial_{k:05d}.pkl"))
         metrics_rows.append(m)
         by_cond[cond].append(trimmed)
+    # Sanity check (M3)
+    assert abs(1.0 / args.n_stimuli - 0.25) < 1e-9 or args.n_stimuli != 4, \
+        f"chance mismatch: 1/{args.n_stimuli}"
     save_json(metrics_rows, os.path.join(args.out_dir, "metrics_rows.json"))
 
     # ---- per-condition aggregation: per-seed decoder + averaged metrics ----

@@ -166,6 +166,167 @@ The project-level agent definition is `/.claude/agents/reviewer.md`.
 
 ---
 
+## O3 — Reviewer round 2 (2026-06-02, task #22)
+
+**Agent role:** reviewer (acting via general-purpose subagent), second pass.
+
+**Brief I sent (verbatim summary):** asked the agent to verify whether all
+round-1 items (B1/B2/B3 + S1–S4 + M1–M5) were adequately addressed by
+re-inspecting `channels.py`, `metrics.py`, `exp2_causal_disruption.py`,
+the n=12 paired-stats JSON, the full-scale Exp 1 summary, the coherence
+ANOVA JSON, and the full-scale calibration JSON. Told it to re-derive at
+least one independent check (e.g. recompute the paired Wilcoxon from
+saved per-seed data) and to flag any new issues. Asked specifically about
+(1) whether the n=6→n=12 flip is genuinely a power issue, (2) whether
+the Poisson interpretation in D14 holds (γ power destroyed but coherence
+preserved), (3) whether W=0 really means all paired differences are
+positive given LeaveOneGroupOut produces quantized accuracies. Asked for
+a round-1 item status table + new-issues section + verdict. Output to
+`reviews/review_round2.md`.
+
+**Returned (verbatim summary):**
+
+> Verdict: ready with caveats.
+> All three round-1 BLOCKERS substantively addressed:
+> - B1 fixed: channel wrap-around preserves 100% of spikes; summarize_trial
+>   reports delivered rate/power/coherence (full-scale scramble: rate −7%,
+>   power −9%, coherence −66%).
+> - B2 fixed for Exp 2: LeaveOneGroupOut + paired Wilcoxon. **Not** fixed
+>   for Exp 1 (new issue N2).
+> - B3 partially: n=12 still below locked ≥20, honestly flagged.
+> All SHOULD-FIX and MINOR items addressed; ANOVA, Wilcoxon, and delivered-
+> metric numbers reproduce from saved data.
+>
+> New caveats:
+> - N1: D14's claim "all paired differences positive" is wrong — 9 positive,
+>   3 ties (effective Wilcoxon n=9). p=0.0039 still correct.
+> - N2: H1 decoding CIs at full scale are CV-fold, not seed-level.
+> - N3: "n=6→n=12 flip is purely a power issue" is misleading — per-seed
+>   values for seeds 0–5 differ between runs (likely fold-structure also
+>   changed).
+> - N4: trial pickles missing from headline merged dirs (code now saves
+>   them; merged dir didn't inherit).
+> - S4 acknowledged: full-scale γ peak 49 Hz, bimodal (43/63), below
+>   target.
+
+**Artifacts written:** `reviews/review_round2.md`.
+
+**Reported cost:** ~81k subagent tokens; 27 tool calls; ~3.3 min duration.
+
+**Orchestrator notes:**
+- All caveats N1–N4 + S4 are now in `decisions.md` D15 with explicit table.
+- N1 (paired-diffs typo) was a real mistake on my part — fixed in D14 of
+  decisions.md; verified by re-loading paired_stats.json (9 positive, 3
+  ties, 0 negative; W=0; p=0.0039).
+- N2 (Exp 1 CIs still CV-fold) is not blocking — the H1 curve is supporting
+  evidence, not the headline. Manuscript will describe it as qualitative.
+- N3 is honest: I cannot fully attribute the n=6→n=12 flip to power alone;
+  flagged in D15.
+- N4 is provenance, not correctness: reviewer verified per-seed accuracies
+  match between merged `_n12/` summary and source `_intsc/` pickles.
+- **Round-2 verdict cleared the writer to start drafting**, with the
+  caveats listed in D15 made explicit in Methods/Limitations.
+
+---
+
+---
+
+## O4 — Reviewer round 3 (2026-06-02, task #25)
+
+**Agent role:** reviewer (general-purpose subagent), third pass focused on
+the new n=20 Exp 2 numbers and the H3 receiver-oscillation experiment.
+
+**Brief I sent (summary, to be replaced with the actual prompt sent in the
+next tool call):** verify the n=20 paired stats reproduce, verify the H3
+implementation (disable_oscillation flag in PINGConfig zeroes the right
+synapses), verify the H3 result direction (scramble > intact when receiver
+oscillation disabled, p=0.011), check that the H3 hyperactive receiver
+(60 Hz) interpretation is sound, and weigh in on the H1/H2/H3 synthesis
+claim that the model supports the causal CTC reading.
+
+**Returned (verbatim summary):**
+
+> Verdict: READY FOR WRITING. All n=20 Wilcoxon tests reproduce exactly
+> (intact-vs-scramble W=12 p=0.0070; scramble-vs-poisson W=0 p=0.00038;
+> intact-vs-poisson W=3 p=0.18). H3 reproduces W=11 p=0.011 with 11
+> negative diffs (scramble > intact). Delivered rate/power/coherence
+> triple check holds. H3 implementation verified: disable_oscillation
+> zeroes only g_EI/g_IE on the receiver; sender uses unchanged calibrated
+> config. No remaining blocker.
+>
+> Framing constraints handed to the writer:
+> 1. H1 is "plateau-then-drop," not sharp peak; lead with the coherence
+>    ANOVA, not per-delay decoder CIs.
+> 2. H2 headline = intact-vs-scramble (p=0.0070); scramble-vs-poisson
+>    (p=0.00038) is the load-bearing CTC-vs-power dissociation and
+>    deserves equal billing. Do NOT claim intact > poisson — both at
+>    decoder ceiling, p=0.18.
+> 3. H3: report W=11, p=0.011 AND the confound — receiver triples to
+>    60 Hz, refractory saturation is a coexisting explanation. Honest
+>    reading: "the effect requires an intact receiver E↔I loop; cannot
+>    separate rhythmicity from saturation." Do NOT claim H3 proves
+>    receiver oscillation is necessary for CTC.
+> 4. Synthesis: "consistent with causal CTC, with the caveat that H3
+>    does not isolate rhythmicity from saturation." No language
+>    stronger than "consistent with."
+> 5. Limitations must include, in order: H3 hyperactivity confound,
+>    decoder quantization/ties, γ-peak bimodality at full scale, Exp 1
+>    CV-fold CIs, skipped parameter sweep and H4.
+> 6. Every citation must trace to a source the literature-scout pulled.
+> 7. Canonical artifacts: exp2_full_n20/ and exp3_disabled/.
+>
+> New issues: N5 (H3 saturation confound), N6 (intact-vs-poisson ceiling
+> effect), N7 (foreground scramble-vs-poisson), N8 (report effect size
+> 0.15 alongside p in H3).
+
+**Artifacts written:** `reviews/review_round3.md`.
+
+**Reported cost:** ~63k subagent tokens; 11 tool calls; ~2.3 min duration.
+
+**Orchestrator notes:** all framing constraints encoded into the writer's
+brief below. The H3 saturation confound (N5) is the most important — the
+writer must give the rhythmicity vs saturation alternatives equal weight,
+not lead with rhythmicity.
+
+---
+
+## O5 — Final verification (2026-06-02, task #19)
+
+**Agent role:** independent verifier (general-purpose subagent).
+
+**Brief I sent (summary):** convert the .docx to markdown with pandoc, audit
+every quantitative claim against the saved JSON files, verify every citation
+DOI matches the annotated bibliography, verify figure files exist and match
+captions, check that all 6 reviewer round-3 framing constraints are honored.
+Output to `reviews/final_verification.md` with three tables (numerical claims;
+citations; framing constraints) and a final verdict.
+
+**Returned (verbatim summary):**
+
+> Verdict: needs revision — three small mechanical fixes before sharing.
+> All H1/H3/calibration/decoder/Wilcoxon numbers match the saved data, and
+> all six round-3 framing constraints are honored. Issues found:
+> 1. DOI mismatches against annotated bib (CLAUDE.md guardrail 1):
+>    - Ref 13: manuscript 10.1016/j.neuron.2024.04.013 → should be .020
+>    - Ref 14: manuscript 10.1016/j.tics.2024.07.005 → should be .09.013
+> 2. H2 delivered γ-power numbers mis-rounded: 4.02/3.62/0.41 vs saved
+>    4.07/3.68/0.43.
+> 3. "Granger F dropped from 100 to 0.1" wrong — saved data 92→12.
+> All figures exist and match captions; refs 1–12, 15 match exactly;
+> manipulation-check rates, coherences, all decoder means/SEs, all paired
+> Wilcoxon stats, H1 ANOVA, and calibration numbers all verify cleanly.
+
+**Artifacts written:** `reviews/final_verification.md`.
+
+**Reported cost:** ~54k subagent tokens; 12 tool calls; ~2.2 min duration.
+
+**Orchestrator notes:** all three issues fixed in `drafts/build_manuscript.js`
+and the .docx regenerated. Spot-check post-fix: refs 13/14 now show the
+corrected DOIs, H2 powers print as 4.07 / 3.68 / 0.43, Granger sentence
+reads "92 to 12". Manuscript revalidates clean.
+
+---
+
 ## How to use this log going forward
 
 - Before invoking any future subagent, copy the brief here as a new entry

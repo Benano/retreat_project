@@ -108,11 +108,13 @@ def gamma_band_mean(f: np.ndarray, v: np.ndarray,
 # ---------------------------------------------------------------------------
 
 def granger_causality(x_send: np.ndarray, y_recv: np.ndarray,
-                      max_lag: int = 10) -> dict:
-    """Pairwise-conditional Granger via OLS VAR. Returns F-stats and direction.
+                      lag: int = 5) -> dict:
+    """Pairwise-conditional Granger via OLS VAR.
 
-    Uses statsmodels' grangercausalitytests (model-free F test on lag-augmented
-    regressions). Returns the best-lag p-value and F-stat in each direction.
+    Uses statsmodels' grangercausalitytests at a SINGLE FIXED LAG (default 5,
+    appropriate for 1-ms bins and gamma rhythm of ~60 Hz / 16 ms period).
+    Reviewer round 1 M4 flagged that taking max-F across multiple lags inflates
+    the statistic, so we report only the fixed-lag value here.
     """
     try:
         from statsmodels.tsa.stattools import grangercausalitytests
@@ -120,37 +122,27 @@ def granger_causality(x_send: np.ndarray, y_recv: np.ndarray,
         return {"available": False}
 
     import warnings
-    warnings.filterwarnings("ignore")  # statsmodels chatters about deprecations
+    warnings.filterwarnings("ignore")
 
-    # statsmodels expects columns [y, x] for "does x granger-cause y?"
     data_xy = np.column_stack([y_recv, x_send])  # tests x → y (sender → receiver)
     data_yx = np.column_stack([x_send, y_recv])  # tests y → x (receiver → sender)
-    res_sr = grangercausalitytests(data_xy, maxlag=max_lag, verbose=False)
-    res_rs = grangercausalitytests(data_yx, maxlag=max_lag, verbose=False)
+    res_sr = grangercausalitytests(data_xy, maxlag=lag, verbose=False)
+    res_rs = grangercausalitytests(data_yx, maxlag=lag, verbose=False)
 
-    def best(res):
-        best_F = -np.inf
-        best_p = 1.0
-        best_lag = None
-        for lag, r in res.items():
-            F, p, df_diff, df_resid = r[0]["ssr_ftest"]
-            if F > best_F:
-                best_F = F
-                best_p = p
-                best_lag = lag
-        return float(best_F), float(best_p), int(best_lag) if best_lag else None
+    def at_lag(res, L):
+        F, p, df_diff, df_resid = res[L][0]["ssr_ftest"]
+        return float(F), float(p)
 
-    F_sr, p_sr, lag_sr = best(res_sr)
-    F_rs, p_rs, lag_rs = best(res_rs)
+    F_sr, p_sr = at_lag(res_sr, lag)
+    F_rs, p_rs = at_lag(res_rs, lag)
     return {
         "available": True,
         "F_send_to_recv": F_sr,
         "p_send_to_recv": p_sr,
-        "best_lag_send_to_recv": lag_sr,
         "F_recv_to_send": F_rs,
         "p_recv_to_send": p_rs,
-        "best_lag_recv_to_send": lag_rs,
         "asymmetry_F": F_sr - F_rs,
+        "lag_used": lag,
     }
 
 
@@ -341,7 +333,7 @@ def summarize_trial(trial: dict, transient_ms: float = 200.0,
     else:
         d_coh = float("nan")
 
-    gc = granger_causality(s_sig, r_sig, max_lag=8)
+    gc = granger_causality(s_sig, r_sig, lag=5)
     te = transfer_entropy(s_sig, r_sig, n_bins=4, lag=2)
 
     return PerTrialMetrics(

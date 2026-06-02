@@ -137,17 +137,14 @@ def main():
                                   progress_every=max(5, len(work) // 20))
     print(f"Trials finished in {time.time() - t0:.0f} s")
 
-    # Save trimmed trials and a flat metrics table
+    # Save ALL trimmed trials (reviewer round 1 M2).
     metrics_rows = []
     for k, (trimmed, m) in enumerate(results):
-        # Save sparsely to keep disk usage manageable: write only one trial per
-        # (delay, seed) pair as an exemplar; metrics for all.
-        if k % args.n_stimuli == 0:
-            save_pickle(trimmed, os.path.join(args.out_dir, f"trial_{k:05d}.pkl"))
+        save_pickle(trimmed, os.path.join(args.out_dir, f"trial_{k:05d}.pkl"))
         row = dict(m)
         row.update({
             "delay_ms": work[k]["delay_ms"],
-            "seed": k // args.n_stimuli // args.n_seeds * 0 + work[k]["sender_seed"] // 100,
+            "seed": work[k]["sender_seed"] // 100,
             "stim_id": work[k]["stim_id"],
         })
         metrics_rows.append(row)

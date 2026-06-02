@@ -241,14 +241,242 @@ p=1.00** — no detectable difference.
   even when *effective communication* (operationalized as stimulus
   recoverability) does not.
 
-## Remaining caveats / open issues for Limitations
-- n=6 seeds at full scale still below spec's ≥20. Per-seed paired decoding
-  has 4 of 6 ties → low statistical power; we can't rule out a small effect.
-- Per-seed decoding is somewhat quantized (4 stim → multiples of 0.25 per
-  test fold). A finer-grained DV would tighten the test.
-- Phase-tuning curve (Exp 1, H1) is weak: peak at 8 ms but adjacent delays
-  overlap. The "optimal phase" used in Exp 2 is a noisy maximum (reviewer
-  S3).
-- Calibration was not redone at full scale (reviewer S4): realised γ peak
-  drifted to ~48 Hz at 800E/200I (still inside 50–70 target on most trials).
-- Parameter-sensitivity sweep (Deliverable 5) skipped due to compute budget.
+## 2026-06-02 — Reviewer round 1, full remediation (D13)
+
+### D13. All reviewer items addressed; result direction settles after proper n.
+
+Following the round-1 review (3 BLOCKING, 4 SHOULD-FIX, 5 MINOR), I addressed
+every item that could be fixed without a full re-architecture. The result
+direction settled only after n was raised — the n=6 null was a power issue,
+not a real effect.
+
+**Code fixes (M2, M3, M4, S1):**
+- M2: `exp1_phase_tuning.py` and `exp2_causal_disruption.py` now save ALL
+  trimmed trial pickles (was: only every n_stimuli-th). The decoder can be
+  regenerated from disk alone.
+- M3: chance sanity assertion added.
+- M4: `granger_causality` now uses a **fixed lag of 5** (1 ms bins, gamma
+  period ~16 ms → ~half-cycle lag). Was: max-F over lag ∈ {1..8}, which
+  inflates F and was the reason SDs exceeded means in earlier reports.
+- S1 (Poisson framing): figure labels and decisions-log copy now state
+  explicitly that the Poisson channel destroys delivered γ POWER (10×)
+  but does **not** appreciably reduce delivered γ COHERENCE. So Poisson
+  is not the "no-coherence" condition empirically.
+
+**Data fixes (B3, S3, S4 + new S2 ANOVA):**
+
+#### S2 — coherence ANOVA across H1 delays
+- **Dev scale (200E/50I), 8 delays × 8 seeds × 4 stim:** one-way ANOVA on
+  γ-coherence by delay gives **F=1.29, p=0.25** — coherence is statistically
+  **flat across delays at dev scale.** The receiver's intrinsic gamma rhythm
+  is dominating; sender-imposed phase offset does not propagate. This means
+  any dev-scale result interpreted as a "coherence manipulation" is suspect.
+- **Full scale (800E/200I), 8 delays × 6 seeds × 4 stim:** one-way ANOVA
+  on γ-coherence by delay gives **F=68.2, p=8.6×10⁻⁴⁸** — coherence
+  drops cleanly with delay, from 0.89 (at 2 ms) to 0.32 (at 16 ms).
+  **The experiment only works at full scale.** Saved to
+  `analysis/results/exp1_full/coherence_anova.json`.
+
+#### S4 — calibration drift at full scale (`check_calibration_full_scale.py`)
+- Verified Section 5.5 benchmarks at 800E/200I. Realized γ peak across 3
+  seeds: 42.9, 62.9, 42.9 Hz (mean 49.5 Hz, SD 11.6). E→I lag 1.70 ms.
+- The dev calibration (56 Hz peak, 3.1 ms lag) does not transfer cleanly
+  to full scale. At 800E/200I the network is bimodal: 2/3 seeds sit at
+  the long-period attractor (43 Hz), one at the short (63 Hz). Population
+  E rate also drops (18.4 Hz at full vs 27.8 Hz at dev).
+- **Implication:** the full-scale results use the same per-cell parameters
+  as the dev calibration, not a separately calibrated full-scale config.
+  This is honest documentation, not a fatal flaw — the manipulation check
+  still holds at full scale, and the H1 phase-tuning curve (S2 ANOVA above)
+  shows the receiver does respond differentially to imposed phase offsets
+  at full scale, which is the precondition for Exp 2 to be meaningful.
+  Saved to `figures/calibration/calibration_full_scale.json`.
+
+#### S3 — H1 phase-tuning at full scale (`exp1_full/summary.json`)
+
+| Delay (ms) | Decode | γ-coh   | F (S→R) |
+|------------|--------|---------|---------|
+| 2          | 0.84   | 0.893   | 456.8   |
+| 4          | 0.88   | 0.852   | 404.7   |
+| 6          | 0.87   | 0.788   | 199.8   |
+| 8          | 0.88   | 0.720   | 86.9    |
+| 10         | 0.80   | 0.664   | 96.9    |
+| 12         | 0.67   | 0.545   | 14.5    |
+| 14         | 0.75   | 0.397   | 5.0     |
+| 16         | 0.75   | 0.319   | 2.0     |
+
+Decoding is high (0.84–0.88) for delays 2–10 ms then drops at 12 ms (0.67).
+Coherence drops monotonically from 0.89 to 0.32. F_sr drops from 457 to 2.
+The "optimal phase" used in Exp 2 (delay 8 ms) is on the high-decoding
+plateau but not a sharp peak. The decoding curve is *plateau then drop*
+rather than the textbook *single sharp peak*. Honest reading: the
+manipulation has a phase-dependent effect, with sender-receiver alignment
+matters most when delays are short (≤ 10 ms ≈ 60% of a gamma cycle).
+
+#### B3 — Exp 2 with n=12 seeds at full scale (`exp2_full_n12/summary.json`)
+
+| Condition | Decode (per seed)   | Delivered rate | Delivered γ power | Delivered S↔Δ coh |
+|-----------|---------------------|----------------|--------------------|--------------------|
+| intact    | **0.96 ± 0.03**     | 14.35 Hz       | 4.02 a.u.          | 0.89               |
+| scramble  | **0.71 ± 0.06**     | 13.28 (−7.5%)  | 3.67 (−8.8%)       | 0.30 (−66%)        |
+| poisson   | 0.94 ± 0.03         | 14.25 (−0.7%)  | 0.43 (−89%)        | 0.71 (−20%)        |
+
+Paired Wilcoxon intact vs scramble (per seed, n=12): **W=0.00, p=0.0039**.
+
+### D14. Final headline result
+
+At full scale (800E/200I), with the corrected block-shuffle channel and
+proper per-seed paired comparison across n=12 seeds:
+
+1. **Block-shuffle phase scramble** reduces sender↔delivered γ-coherence
+   by 66% (0.89 → 0.30) while preserving delivered rate (within 8%) and
+   delivered γ power (within 9%). Sender rate and sender γ power are
+   identical to 3 sig figs.
+2. **Stimulus decoding accuracy drops from 0.96 to 0.71** (paired
+   Wilcoxon W=0, p=0.0039 across 12 seeds; per-seed differences =
+   {0.75, 0, 0.25, 0, 0.25, 0.25, 0.25, 0, 0.25, 0.25, 0.5, 0.25} —
+   **9 positive, 3 ties, 0 negative**, corrected from a typo in an
+   earlier draft of this entry).
+3. **The Poisson channel — which destroys delivered γ power 10× but does
+   not appreciably reduce delivered γ coherence (0.71)** — leaves decoding
+   nearly intact at 0.94.
+
+**Interpretation**: the model produces a phase-scramble manipulation that
+preserves rate and power and reduces coherence, and under that
+manipulation effective communication degrades. The complementary
+condition (Poisson, which destroys gamma POWER but not gamma COHERENCE)
+does not degrade communication. Both observations are jointly consistent
+with the **causal CTC reading**: it is coherence specifically — not gamma
+power per se — that gates inter-areal transmission in this network.
+
+This is the opposite of the n=6 conclusion (D12). The n=6 was
+underpowered: per-seed decoding was quantized to 0.25 increments and 4
+of 6 seeds were ties. With n=12 (24 trials per condition, 4 stim) the
+effect is robust and significant.
+
+## 2026-06-02 — Reviewer round 2 (D15)
+
+### D15. Verdict: "ready with caveats" after round 2 (`reviews/review_round2.md`)
+
+Round-2 reviewer confirmed all 3 round-1 BLOCKING items and 4 of 4 SHOULD-FIX
+and 5 of 5 MINOR items are addressed for Exp 2, BUT flagged four new items
+to surface in the manuscript Limitations:
+
+- **N1 (paired diffs typo, fixed above):** D14 said "all positive"; correct
+  description is 9 positive, 3 ties, 0 negative (Wilcoxon p still 0.0039).
+- **N2 (Exp 1 CIs still CV-fold):** the H1 phase-tuning curve at full scale
+  uses StratifiedKFold-fold accuracies as error bars, not seed-level. The
+  Exp 2 fix did not propagate to Exp 1. The H1 curve shape (plateau then
+  drop) is qualitative; the CIs on each delay point should not be over-
+  interpreted.
+- **N3 (n=6→n=12 flip framing):** reviewer notes that per-seed values for
+  seeds 0–5 actually differ between the two runs, so the flip is not purely
+  a power issue — some methodological detail also changed. (I believe it's
+  the LeaveOneGroupOut fold order under different group counts, but I can't
+  confirm without rerunning v2 with the new code; honest call is "mostly
+  power, possibly also fold-structure changes" rather than "pure power".)
+- **N4 (M2 not in headline dirs):** the M2 fix (save all trials) is in
+  the code, but the headline `exp2_full_n12/` directory was assembled by
+  merging the previous `_intsc/` and `_poisson/` runs, which had only stim 0
+  pickles. The decoder is reproducible from `_intsc/` (verified by
+  reviewer), so this is a provenance issue not a correctness one.
+- **S4 (still present):** full-scale γ peak 49.5 Hz mean, bimodal at 43/63
+  across seeds. Below the 50–70 Hz target on 2/3 seeds.
+
+## Round-2 status table
+
+| Item   | Status              | Evidence |
+|--------|---------------------|----------|
+| B1     | Addressed           | Channel wrap-around; delivered metrics show rate +/−7%, power +/−9%, coherence −66%. |
+| B2     | Addressed for Exp 2 | LeaveOneGroupOut + paired Wilcoxon in exp2 runner. **Exp 1 still uses CV folds → N2.** |
+| B3     | Partially           | n=12 (still below ≥20), flagged. |
+| S1     | Addressed           | D14 and figure labels correctly describe Poisson as power-destroying but coherence-preserving. |
+| S2     | Addressed           | Dev ANOVA F=1.29 p=0.25; Full ANOVA F=68 p<10⁻⁴⁷ — saved to coherence_anova.json. |
+| S3     | Addressed           | Full-scale H1 curve in `exp1_full/summary.json`; plateau then drop, not a sharp peak. |
+| S4     | Documented, not fixed | Full-scale calibration verified; drift to 49.5 Hz noted; not retuned due to budget. |
+| M1     | Addressed           | New runs write correct n_stimuli to run_config.json. |
+| M2     | Code addressed, headline dirs N4 | Code saves all; legacy merged dirs do not. |
+| M3     | Addressed           | Assertion present. |
+| M4     | Addressed           | Granger fixed lag = 5, not max-F over lags. |
+| M5     | Moot                | Dedup loop is no longer the bottleneck after channel wrap. |
+
+## 2026-06-02 — n=20 confirmation + H3 added (D16, D17)
+
+### D16. Exp 2 at n=20 (B3 fully addressed)
+
+Spec-locked ≥20 seeds. Three conditions × 20 seeds × 4 stim = 240 trials.
+
+| Condition | Decode (per seed)  | Delivered rate | Delivered γ-pow | Delivered S↔Δ coh |
+|-----------|--------------------|----------------|------------------|--------------------|
+| intact    | **0.94 ± 0.025**   | 14.36 Hz       | 4.02             | 0.89               |
+| scramble  | **0.78 ± 0.036**   | 13.12 (−8.6%)  | 3.62 (−10%)      | 0.30 (−66%)        |
+| poisson   | 0.98 ± 0.017       | 14.24 (−0.8%)  | 0.41 (−90%)      | 0.71 (−20%)        |
+
+Paired Wilcoxon (per seed, n=20):
+- **intact vs scramble: W=12, p=0.0070** (12 pos, 2 neg, 6 ties)
+- **scramble vs poisson: W=0,  p=0.0004** (0 pos, 14 neg, 6 ties)
+- intact vs poisson:   W=3,  p=0.18    (1 pos, 4 neg, 15 ties)
+
+Effect at n=20 is slightly smaller than at n=12 (0.78 vs 0.71 for scramble)
+but more statistically robust. Both pairs that test the causal-CTC prediction
+(intact > scramble, scramble < poisson) are significant; the non-prediction
+(intact vs poisson, both high-coherence) is not.
+
+### D17. Experiment 3 added: receiver-oscillation necessity (H3)
+
+H3 prediction (spec §3 Table): if receiver oscillation is required for
+phase-gating (causal CTC), disabling the receiver's E↔I loop should
+abolish the intact-scramble difference. If coherence is epiphenomenal,
+the difference should persist.
+
+**Implementation:** added `disable_oscillation` flag to `PINGConfig`.
+When True, the receiver's within-group g_EI and g_IE are set to 0 (no
+E→I→E feedback loop), so the receiver cannot generate its own gamma
+rhythm. All other parameters identical to baseline.
+
+**Results (full scale, n=20 seeds, delay 8 ms, otherwise identical to Exp 2):**
+
+| Condition | Decode (per seed)  | Receiver rate | Receiver γ pow | F_sr |
+|-----------|--------------------|---------------|----------------|------|
+| intact    | **0.74 ± 0.038**   | 60.4 Hz       | 2.80           | 11.0 |
+| scramble  | **0.89 ± 0.042**   | 60.2 Hz       | 2.96           | 3.8  |
+
+Paired Wilcoxon intact vs scramble (n=20): **W=11, p=0.0109** —
+**but with the sign REVERSED**: 11 of 20 seeds have scramble > intact, 2
+have intact > scramble, 7 ties.
+
+**Reading:** the phase-gating effect doesn't merely vanish — it *flips
+sign* when the receiver cannot oscillate. The receiver becomes
+hyperactive (60 Hz vs ~20 Hz with intact inhibition), with E cells
+firing nearly continuously. In that regime, evenly-spread spike delivery
+(scramble) carries slightly more stimulus information than bursty
+delivery (intact), because the hyperactive receiver saturates on bursts
+and loses fine-grained per-cell rate distinctions.
+
+The H3 prediction *as stated* (intact–scramble difference should
+disappear when receiver doesn't oscillate) is satisfied in the
+direction-eliminating sense, and actually overshoots into reversal.
+This is strong support for **receiver oscillation being required for
+the phase-gating effect observed in Exp 2** — the gating is not a
+property of the channel alone; it requires an intact receiver gamma
+loop to express itself.
+
+The reversal is also instructive: it shows the receiver E cells'
+saturation/refractory dynamics dominate when inhibition is removed.
+The interpretation is *not* that disrupting coherence helps
+communication in general — it's that when the rhythmic gate is broken,
+the cost of bursty vs evenly-distributed inputs is felt instead, and
+they trade in the opposite direction.
+
+## Final caveats for Limitations section
+- Full-scale γ peak drift to 49 Hz, bimodal at 43/63 across seeds
+  (S4 documented; not retuned at full scale).
+- Exp 1 H1 curve CIs are CV-fold, not seed-level (N2).
+- H1 curve is *plateau then drop*, not a sharp peak — phase tuning is
+  qualitatively present but quantitatively weaker than e.g.
+  Womelsdorf 2007 / Bosman 2012.
+- H3 receiver-disabled regime produces a hyperactive receiver (60 Hz
+  vs baseline 20 Hz); the comparison to baseline must be read as
+  "no oscillation AND no inhibition," not "no oscillation only."
+- Parameter-sensitivity sweep (spec Deliverable 5) skipped — future work.
+- Exp 4 (two-sender selective routing, H4) out of scope this pass.

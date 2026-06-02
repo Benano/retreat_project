@@ -141,16 +141,19 @@ def phase_tuning_figure(summary, suffix, title, n_stim=4):
 
 if __name__ == "__main__":
     print("Generating final figures...")
-    exp1 = load(os.path.join(HERE, "results", "exp1", "summary.json"))
+    exp1_dev = load(os.path.join(HERE, "results", "exp1", "summary.json"))
+    exp1_full = load(os.path.join(HERE, "results", "exp1_full", "summary.json"))
     exp2_dev = load(os.path.join(HERE, "results", "exp2", "summary.json"))
-    exp2_full = load(os.path.join(HERE, "results", "exp2_full_v2", "summary.json"))
+    exp2_full = load(os.path.join(HERE, "results", "exp2_full_n12", "summary.json"))
 
-    phase_tuning_figure(exp1, "", "Exp 1 (H1) phase tuning — 200E/50I, n=8 seeds")
-    causal_figure(exp2_dev, "_dev", "Exp 2 (H2) causal disruption — 200E/50I, n=8 seeds")
-    manip_figure(exp2_dev, "_dev", "Manipulation check — 200E/50I")
-    causal_figure(exp2_full, "_full", "Exp 2 (H2) causal disruption — 800E/200I, n=4 seeds")
-    manip_figure(exp2_full, "_full", "Manipulation check — 800E/200I")
-    # Headline figure = full-scale, no suffix
-    causal_figure(exp2_full, "", "Exp 2 (H2) causal disruption — 800E/200I")
-    manip_figure(exp2_full, "", "Manipulation check — 800E/200I (rate + power held fixed)")
+    phase_tuning_figure(exp1_dev, "_dev",
+                        "Exp 1 (H1) — 200E/50I, n=8 seeds (γ-coh flat, F=1.3 p=0.25)")
+    phase_tuning_figure(exp1_full, "",
+                        "Exp 1 (H1) phase tuning — 800E/200I, n=6 seeds (γ-coh F=68 p<10⁻⁴⁷)")
+    causal_figure(exp2_dev, "_dev", "Exp 2 (H2) — 200E/50I, n=8 seeds (underpowered)")
+    manip_figure(exp2_dev, "_dev", "Manipulation check — 200E/50I (dev)")
+    causal_figure(exp2_full, "",
+                  "Exp 2 (H2) causal disruption — 800E/200I, n=12 seeds (W=0, p=0.0039)")
+    manip_figure(exp2_full, "",
+                 "Manipulation check (n=12) — rate ✓, power ✓, coherence ✗ (manipulated)")
     print("Done.")
